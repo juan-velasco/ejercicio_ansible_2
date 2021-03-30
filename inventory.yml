@@ -1,0 +1,7 @@
+all:
+  hosts:
+    curso:
+      ansible_host: 168.63.8.36
+      ansible_user: azureuser
+      ansible_port: 22
+      mysql_root_password: 1q2w3e4r5t6y
