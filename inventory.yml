@@ -4,4 +4,7 @@ all:
       ansible_host: 168.63.8.36
       ansible_user: azureuser
       ansible_port: 22
-      mysql_root_password: 1q2w3e4r5t6y
+      mysql_root_password: 1q2w3e4r5t6y 
+      
+      # Normalmente usaremos Ansible Vault para almacenar las contraseñas
+      # https://docs.ansible.com/ansible/latest/user_guide/vault.html
