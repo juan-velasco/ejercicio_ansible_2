@@ -26,25 +26,24 @@
               update_cache: yes
         - name: Install PHP
           apt:
-              name:  ['php7.4',
-                      'php7.4-common',
-                      'php7.4-gd',
-                      'php7.4-zip',
-                      'php7.4-bz2',
-                      'php7.4-cli',
-                      'php7.4-curl',
-                      'php7.4-dev',
-                      'php7.4-fpm',
-                      'php7.4-intl',
-                      'php7.4-json',
-                      'php7.4-ldap',
-                      'php7.4-mbstring',
-                      'php7.4-mysql',
-                      'php7.4-odbc',
-                      'php7.4-opcache',
-                      'php7.4-readline',
-                      'php7.4-sqlite3',
-                      'php7.4-xml',
+              name:  ['php8.1',
+                      'php8.1-common',
+                      'php8.1-gd',
+                      'php8.1-zip',
+                      'php8.1-bz2',
+                      'php8.1-cli',
+                      'php8.1-curl',
+                      'php8.1-dev',
+                      'php8.1-fpm',
+                      'php8.1-intl',
+                      'php8.1-ldap',
+                      'php8.1-mbstring',
+                      'php8.1-mysql',
+                      'php8.1-odbc',
+                      'php8.1-opcache',
+                      'php8.1-readline',
+                      'php8.1-sqlite3',
+                      'php8.1-xml',
               ]
               state: present
               update_cache: yes
@@ -96,12 +95,12 @@
   tasks:
     - name: Set post_max_size
       ansible.builtin.lineinfile:
-        path: /etc/php/7.4/fpm/php.ini
+        path: /etc/php/8.1/fpm/php.ini
         regexp: "post_max_size ="
         line: post_max_size = 25M
     - name: Set upload_max_filesize
       ansible.builtin.lineinfile:
-        path: /etc/php/7.4/fpm/php.ini
+        path: /etc/php/8.1/fpm/php.ini
         regexp: "upload_max_filesize ="
         line: upload_max_filesize = 25M
 -
@@ -180,5 +179,5 @@
   tasks:
     - name: Restart PHP-FPM
       ansible.builtin.service:
-        name: php7.4-fpm
+        name: php8.1-fpm
         state: restarted        
